@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymleaf.org/" >
+	<head>
+		<title>Insert title here</title>
+	</head>
+	<body>
+	<h1>Product Register Page</h1>
+	<form th:action="@{/product/save}"  method="POST">
+		<pre>
+			Name:<input type="text" name="prdName">
+			Code:<input type="text" name="prdCode">
+			Cost:<input type="text" name="prdCost">
+			Vendor:<select name="prdVen">
+				<option value="">-SELECT-</option>
+				<option value="R.K.">R.K.</option>
+				<option value="TEST">TEST</option>
+				<option value="ORACLE">ORACLE</option>
+			</select>
+			Note:<textarea name="prdNote"></textarea>
+			<input type="submit" value="CREATE">
+		</pre>
+	</form>
+	</body>
+	</br>
+	<a th:href="@{/product/all}">View All</a>
+	<span th:text="${data}"></span>
+	</html>

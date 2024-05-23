@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymleaf.org/">
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Product Data</title>
+	</head>
+	<body>
+		<h1>Welcome to Product Data Page</h1>
+		<table border=1>
+			<tr>
+				<th>ID</th>
+				<th>NAME</th>
+				<th>CODE</th>
+				<th>COST</th>
+				<th>NOTE</th>
+				<th>DISCOUNT</th>
+				<th>GST</th>
+				<th>VENDOR</th>
+			</tr>
+			<tr th:each="ob:${list}">
+				<th th:text="${ob.prdId}"></th>
+					<th th:text="${ob.prdName}"></th>
+						<th th:text="${ob.prdCode}"></th>
+							<th th:text="${ob.prdCost}"></th>
+								<th th:text="${ob.prdNote}"></th>
+									<th th:text="${ob.prdDis}"></th>
+										<th th:text="${ob.prdGst}"></th>
+											<th th:text="${ob.prdVen}"></th>
+			</tr>
+		</table>
+		<a th:href="@{/product/register}">Add New !!!!</a>
+		
+	</body>
+	</html>
